@@ -1,0 +1,207 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border-radius: 10px;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+html {
+  font-size: 62.5%; /*1rem=10px*/
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 70%;
+  outline: 1px solid #777;
+  margin: 2rem auto;
+
+  .search-box {
+    outline: 1px solid #777;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .vinyl {
+      height: 5rem;
+      border-radius: 100px 0 0 100px;
+      border: 1px solid #777;
+      border-right: none;
+
+      img {
+        height: 100%;
+        padding: 0.8rem 1rem 0.8rem 1.5rem;
+        cursor: default;
+      }
+    }
+
+    input {
+      height: 5rem;
+      outline: none;
+      border: 1px solid #777;
+      border-left: none;
+      border-radius: 0 100px 100px 0;
+      width: 50%;
+      padding-left: 2rem;
+      font-size: 2rem;
+      text-transform: capitalize;
+      font-family: 'Pangolin', cursive;
+    }
+  }
+
+  .card-scroll {
+    overflow-y: scroll;
+    height: 35rem;
+  }
+
+  .card-container {
+    outline: 1px solid #777;
+
+    .card {
+      display: grid;
+      grid-template-columns: 12rem 1fr 20rem 12rem;
+      justify-items: center;
+      align-items: center;
+      height: calc(35rem / 4);
+      outline: 1px solid #777;
+
+      .like {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Fugaz One', cursive;
+
+        span {
+          margin-right: 10px;
+          font-size: 3rem;
+        }
+
+        img {
+          cursor: pointer;
+          height: 3rem;
+        }
+      }
+
+      .name {
+        display: flex;
+        flex-direction: column;
+        font-family: 'Pangolin', cursive;
+        font-size: 2rem;
+        text-align: start;
+        text-transform: capitalize;
+        white-space: nowrap;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        .sub-title {
+          font-size: 1.6rem;
+        }
+      }
+
+      .audio {
+        width: 100%;
+        text-align: center;
+
+        audio {
+          width: 18rem;
+          height: 3.5rem;
+        }
+      }
+
+      .delete {
+        cursor: pointer;
+
+        img {
+          height: 2rem;
+        }
+      }
+    }
+  }
+
+  .add-container {
+    outline: 1px solid #777;
+    height: 12rem;
+
+    form {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+
+      .add-content {
+        display: flex;
+        align-items: center;
+
+        img {
+          height: 5rem;
+          border: 1px solid #777;
+          padding: 6px 15px;
+        }
+
+        .type {
+          padding-right: 15px;
+          border-radius: 100px 0 0 100px;
+          border-right: none;
+        }
+
+        .dance {
+          padding-left: 15px;
+          border-radius: 0 100px 100px 0;
+          border-left: none;
+          cursor: pointer;
+        }
+
+        input {
+          height: 5rem;
+          border: 1px solid #777;
+          border-right: none;
+          text-align: center;
+          width: 100%;
+          font-size: 1.4rem;
+          text-transform: capitalize;
+          font-family: 'Pangolin', cursive;
+        }
+
+        button {
+          height: 5rem;
+          border: 1px solid #777;
+          border-right: none;
+          width: 50%;
+          padding-left: 2rem;
+          background: none;
+          text-transform: capitalize;
+          font-family: 'Pangolin', cursive;
+          font-size: 1.6rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
